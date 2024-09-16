@@ -1,0 +1,300 @@
+*
+{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+::-webkit-scrollbar
+{
+  width: 0;
+}
+@font-face {
+  font-family: isocpeur;
+  src: url(font/isocpeur.ttf);
+}
+a
+{
+  color: black;
+  text-decoration: none;
+}
+body
+{
+  color: black;
+  font-family: 'isocpeur';
+  overflow-x: hidden;
+}
+.menuContainer
+{
+  position: relative;
+}
+.logoTitle
+{
+  position: relative;
+  top: 7.2vh;
+  left: 7.2vh;
+}
+.logoTitle a
+{
+  font-size: 2.3vh;
+  transition: .3s;
+}
+.logoTitle a:hover
+{
+  background: rgba(174, 255, 43, 0.57);
+}
+.linkPage
+{
+  position: relative;
+  right: 7.2vh;
+  top: 7.2vh;
+  float: right;
+}
+.linkPage a
+{
+  font-size: 2.3vh;
+  letter-spacing: 2px;
+  margin-left: 2.9vh;
+  transition: .3s;
+  color: rgb(105, 105, 105);
+}
+.linkPage a:hover
+{
+  color: black;
+  background: rgba(174, 255, 43, 0.57);
+}
+#activeMenu
+{
+  color: black;
+}
+.lpm1 .letter,
+.lpm2 .letter,
+.lpm3 .letter,
+.lpm4 .letter {
+	display: inline-block;
+	line-height: 1em;
+}
+.linkSocialNetwork
+{
+  position: absolute;
+  right: 7.2vh;
+  top: 90vh;
+  display: -webkit-inline-box;
+  gap: 2vh;
+}
+.linkSocialNetwork img
+{
+  width: 3.5vh;
+  transition: .3s;
+}
+.linkSocialNetwork img:hover
+{
+  transform: scale(1.5);
+}
+.linkInstagram span,
+.linkTelegram span,
+.linkWhatsApp span
+{
+  visibility: hidden;
+  font-size: 2.3vh;
+  position: absolute;
+}
+
+.linkInstagram:hover span,
+.linkTelegram:hover span,
+.linkWhatsApp:hover span
+{
+  visibility: visible;
+  position: relative;
+  bottom: 1vh;
+  padding-left: .5vh;
+}
+
+.linkInstagram
+{
+  animation: .3s SocialNetworkAminate forwards;
+  left: 0;
+  position: relative;
+  animation-delay: 2s;
+  opacity: 0;
+}
+.linkTelegram
+{
+  animation: .6s SocialNetworkAminate forwards;
+  left: 0;
+  position: relative;
+  animation-delay: 2s;
+  opacity: 0;
+}
+.linkWhatsApp
+{
+  animation: .9s SocialNetworkAminate forwards;
+  left: 0;
+  position: relative;
+  animation-delay: 2s;
+  opacity: 0;
+}
+@keyframes SocialNetworkAminate
+{
+  0%
+  {
+    left: 100vh;
+  }
+  100%
+  {
+    left: 0;
+    opacity: 1;
+  }
+}
+.headerGeneralPage
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+.containerGeneral
+{
+  position: relative;
+  display: -webkit-inline-flex;
+  padding-right: 5vh;
+}
+.containerGeneral img
+{
+  width: 22vh;
+  transition: .3s;
+  z-index: 9;
+  animation: 1s containerGeneral forwards;
+  opacity: 0;
+  animation-delay: 3s;
+}
+@keyframes containerGeneral
+{
+  0%
+  {
+    opacity: 0;
+  }
+  100%
+  {
+    opacity: 1;
+  }
+}
+.containerGeneral img:hover
+{
+  transform: scale(0.8);
+}
+.cartTitleStoneLink
+{
+  position: relative;
+  transform: rotate(-90deg);
+  right: 13vh;
+  font-size: 2.3vh;
+  top: 44vh;
+  z-index: -1;
+  animation: .6s cartTitleStoneLink forwards;
+  opacity: 0;
+  animation-delay: 3.3s;
+}
+@keyframes cartTitleStoneLink
+{
+  0%
+  {
+    opacity: 0;
+    right: 10vh;
+  }
+  100%
+  {
+    opacity: 1;
+    right: 13vh;
+  }
+}
+.hovered 
+{
+  filter: blur(4px);
+  transition: .3s ease;
+}
+.cartTitleStoneLink 
+{
+  transition: color 0.3s ease, transform 0.3s ease; 
+}
+.hovered-title 
+{
+  left: 50%;
+  top: 92%;
+  transform: translateX(-25%);
+}
+.containerGeneral::before
+{
+  content: '';
+  position: absolute;
+  width: 83%;
+  background: black; 
+  height: 100%;
+  top: 0;
+  animation: 1s containerGeneralBefore forwards ease-in;
+  z-index: 99;
+  animation-delay: 2.5s;
+  opacity: 0;
+}
+@keyframes containerGeneralBefore
+{
+  0%
+  {
+    opacity: 0;
+    height: 0%;
+  }
+  50%
+  {
+    opacity: 1;
+    height: 100%;
+  }
+  100%
+  {
+    opacity: 1;
+    height:0vh;
+  }
+} 
+@media (max-width: 400px) {
+  .logoTitle
+  {
+    width: 100%;
+    text-align: center;
+    left: 0;
+  }
+  .logoTitle a
+  {
+    font-size: 4vh;
+  }
+  .linkPage
+  {
+    text-align: center;
+    top: 11vh;
+    float: none;
+    right: 0;
+  }
+  .containerGeneral
+  {
+    transform: rotate(90deg);
+    display: block;
+    margin-top: -25vh;
+  }
+  .cartStoneWrapper img
+  {
+    width: 18vh;
+  }
+  .headerGeneralPage
+  {
+    top: 75%;
+  }
+  .cartTitleStoneLink
+  {
+    top: 36vh;
+    right: 0;
+    left: -11vh;
+  }
+  .linkSocialNetwork {
+    right: 0;
+    top: 95vh;
+    left: 50%;
+    transform: translateX(-35%);
+}
+}
