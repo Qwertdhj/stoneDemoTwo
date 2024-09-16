@@ -254,6 +254,14 @@ body
   }
 } 
 @media (max-width: 400px) {
+  body
+  {
+    overflow: hidden;
+  }
+  .menuContainer 
+  {
+    top: -3vh;
+  }
   .logoTitle
   {
     width: 100%;
@@ -275,26 +283,31 @@ body
   {
     transform: rotate(90deg);
     display: block;
-    margin-top: -25vh;
+    margin-top: -20vh;
   }
   .cartStoneWrapper img
   {
-    width: 18vh;
+    width: 15vh;
   }
   .headerGeneralPage
   {
     top: 75%;
+    left: 54%;
   }
   .cartTitleStoneLink
   {
-    top: 36vh;
+    top: 31vh;
     right: 0;
-    left: -11vh;
+    left: -9vh;
   }
   .linkSocialNetwork {
     right: 0;
     top: 95vh;
     left: 50%;
     transform: translateX(-35%);
-}
+  }
+  .linkSocialNetwork
+  {
+    display: none;
+  }
 }
